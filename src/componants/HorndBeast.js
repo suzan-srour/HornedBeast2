@@ -1,24 +1,15 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import Card from 'react-bootstrap/Card';
+import Col from "react-bootstrap/Col";
 
 class HornedBeast extends React.Component {
-  constructor(props){
-    super(props);
-    this.state={
-      voteNum:""
-    }
-  } 
-  increasVotes =()=>{
-this.setState(
-  { 
-    voteNum: this.state.voteNum +"🦏"
-  })
+ 
 
-  }
     render(){
         return( 
-        
+        <div>
+          <Col>
               <Card style={{ width: '18rem' }} className="beast-card">
                 <Card.Body>
                   <Card.Title>{this.props.title}</Card.Title>
@@ -38,8 +29,9 @@ this.setState(
 
                 </Card.Body>
               </Card>
+              </Col>
+              </div>
             );
           } 
         }
-
 export default HornedBeast;
